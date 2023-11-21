@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegate委派-入門(01)", "delegate委派-入門(01)\delegate委派-入門(01).csproj", "{19702468-5499-4878-B556-CEEAACAB84BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19702468-5499-4878-B556-CEEAACAB84BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19702468-5499-4878-B556-CEEAACAB84BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19702468-5499-4878-B556-CEEAACAB84BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19702468-5499-4878-B556-CEEAACAB84BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B7BC2E8-5D6D-479E-9D4F-E40F76A7A034}
+	EndGlobalSection
+EndGlobal
