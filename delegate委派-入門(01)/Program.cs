@@ -10,7 +10,8 @@ namespace delegate委派_入門_01_
         public delegate int delegate2(int a);
         static void Main(string[] args)
         {
-            delegate1 d1 = (new Ex()).func1;
+            var ex = new Ex();
+            delegate1 d1 = ex.func1;
             delegate2 d2 = Ex.func2;
             //delegate1 d1 = new delegate1((new Ex()).func1);
             //delegate2 d2 = new delegate2(Ex.func2);

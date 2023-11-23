@@ -1,53 +1,56 @@
-﻿[C#簡單聊~委派入門(01)]~與泛型無關的委派型別定義及叫用
+﻿  
+  **具象媒體科技**
+  
+  [C#簡單聊~委派入門(01)]~與泛型無關的委派型別定義及叫用
 
-1. 關於委派：https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates
-   1. 委派(delegate)是一種型別(資料型態)。
-   2. 每個委派型別都規範它宣告的實體所參考函式的「回傳值」與「參數」。
-      何謂「參考」？
-      object c;
-      c= new object();    // c 參考  new object() 實體 
-2. 在哪裏定義委派？
-    1. 命名空間
-    2. 類別
+  1. 關於委派：https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates
+     1. 委派(delegate)是一種型別(資料型態)。
+     2. 每個委派型別都規範它宣告的實體所參考函式的「回傳值」與「參數」。
+        何謂「參考」？
+        object c;
+        c= new object();    // c 參考  new object() 實體 
+  2. 在哪裏定義委派？
+      1. 命名空間
+      2. 類別
 
-3. 定義委派：
-   1. 語法：
-      [存取範圍]  delegate 函式回傳值型別 委派型別名稱(參數列)
-   2. 例子：
-      // delegate1 所宣告的委派物件只能指向没有回傳值且具一個整數參數的函式(方法)
-      public delegate void delegate1(int p1);
+  3. 定義委派：
+     1. 語法：
+        [存取範圍]  delegate 函式回傳值型別 委派型別名稱(參數列)
+     2. 例子：
+        // delegate1 所宣告的委派物件只能指向没有回傳值且具一個整數參數的函式(方法)
+        public delegate void delegate1(int p1);
      
-      // delegate2 所宣告的委派物件只能指向回傳值型態為int且没有參數的函式(方法)
-      public delegate int delegate2();
+        // delegate2 所宣告的委派物件只能指向回傳值型態為int且没有參數的函式(方法)
+        public delegate int delegate2();
      
-      // delegate3 所宣告的委派物件只能指向回傳值型態為string且參數型態依序為int、string型態的方法 
-      public delegate string  delegate3(int p1, string p2);
+        // delegate3 所宣告的委派物件只能指向回傳值型態為string且參數型態依序為int、string型態的方法 
+        public delegate string  delegate3(int p1, string p2);
 
-4. 宣告委派物件並叫用：
-   1. 宣告：
-      delegate1 d1=(new Ex()).func1;
-      delegate2 d2=Ex.func2;
-      delegate1 d11=new delegate1((new Ex()).func1);
-      delegate2 d22=new delegate2(Ex.func2);
-   2. 叫用：
-      d1();
-      d1.Invoke();
-      d2(3);
-      d2.Invoke(4);
-namespace n
-{
-   public delegate void delegate1();
-   public class Ex
-   {
-      public delegate int delegate2(int a);
-      public void func1()
-      {
-          // 程式碼
-      }
+  4. 宣告委派物件並叫用：
+     1. 宣告：
+        delegate1 d1=(new Ex()).func1;
+        delegate2 d2=Ex.func2;
+        delegate1 d11=new delegate1((new Ex()).func1);
+        delegate2 d22=new delegate2(Ex.func2);
+     2. 叫用：
+        d1();
+        d1.Invoke();
+        d2(3);
+        d2.Invoke(4);
+        namespace n
+        {
+           public delegate void delegate1();
+           public class Ex
+           {
+              public delegate int delegate2(int a);
+              public void func1()
+              {
+                // 程式碼
+              }
      
-      public static int func2(int a)
-      {
-          // 程式碼
-      }
-   }
-}
+              public static int func2(int a)
+              {
+                // 程式碼
+              }
+           }
+        }
