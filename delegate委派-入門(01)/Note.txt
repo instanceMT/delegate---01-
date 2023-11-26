@@ -55,6 +55,6 @@
      3) 叫用：
         d1();
         d1.Invoke();
-        d2(3);
-        d2.Invoke(4);
+        int s=d2(3);
+        int rtn=d2.Invoke(4);
         
