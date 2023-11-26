@@ -5,10 +5,11 @@
 
   1. 關於委派：https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates
      1. 委派(delegate)是一種型別(資料型態)。
-     2. 每個委派型別都規範它宣告的實體所參考(指向)函式的「回傳值」與「參數」。
-        何謂「參考」？
+     2. 每個委派型別都規範它宣告的實體所「指向」函式的「回傳值」與「參數」。
+        何謂「指向」？
         object c;
-        c= new object();    // c 參考  new object() 實體;   c 指向  new object() 實體
+        c= new object();     // c 指向  new object() 實體
+     3. 委派實體可以當成函式參數、引數傳遞
   2. 在哪裏定義委派型別？
       1. 命名空間
       2. 類別
