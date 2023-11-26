@@ -7,8 +7,7 @@
      1) 委派(delegate)是一種型別(資料型態)。
      2) 每個委派型別都規範它宣告的實體所「指向」函式的「回傳值」與「參數」。
         何謂「指向」？
-        object c;
-        c= new object();     // c 指向  new object() 實體
+        object c= new object();     // c 指向  new object() 實體
      3) 委派實體可以當成函式參數、引數傳遞
   
   2. 在哪裏定義委派型別？
