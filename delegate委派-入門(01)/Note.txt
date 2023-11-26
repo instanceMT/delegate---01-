@@ -29,12 +29,30 @@
         public delegate string  delegate3(int p1, string p2);
 
   4. 宣告委派物件並叫用：
-     1. 宣告：
+     1. 參考程式：
+        namespace n
+        {
+           public delegate void delegate1();
+           public class Ex
+           {
+              public delegate int delegate2(int a);
+              public void func1()
+              {
+                // 程式碼
+              }
+     
+              public static int func2(int a)
+              {
+                // 程式碼
+              }
+           }
+        }
+     2. 宣告：
         delegate1 d1=(new Ex()).func1;
         delegate2 d2=Ex.func2;
         delegate1 d11=new delegate1((new Ex()).func1);
         delegate2 d22=new delegate2(Ex.func2);
-     2. 叫用：
+     3. 叫用：
         d1();
         d1.Invoke();
         d2(3);
