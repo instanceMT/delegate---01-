@@ -1,24 +1,25 @@
 ﻿  
-  **具象媒體科技**
+  **具象媒體科技** instanceMT.com
   
   [C#簡單聊~委派入門(01)]~與泛型無關的委派型別定義及叫用
 
   1. 關於委派：https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/using-delegates
-     1. 委派(delegate)是一種型別(資料型態)。
-     2. 每個委派型別都規範它宣告的實體所「指向」函式的「回傳值」與「參數」。
+     1) 委派(delegate)是一種型別(資料型態)。
+     2) 每個委派型別都規範它宣告的實體所「指向」函式的「回傳值」與「參數」。
         何謂「指向」？
         object c;
         c= new object();     // c 指向  new object() 實體
-     3. 委派實體可以當成函式參數、引數傳遞
+     3) 委派實體可以當成函式參數、引數傳遞
+  
   2. 在哪裏定義委派型別？
-      1. 命名空間
-      2. 類別
+     1) 命名空間
+     2) 類別
 
   3. 定義委派：
-     1. 語法：
+     1) 語法：
         [存取範圍]  delegate 函式回傳值型別 委派型別名稱(參數列)
         存取範圍：public,  private, internal, protected, ...... 等
-     2. 例子：
+     2) 例子：
         // delegate1 所宣告的委派物件只能指向没有回傳值且具一個整數參數的函式(方法)
         public delegate void delegate1(int p1);
      
@@ -29,7 +30,7 @@
         public delegate string  delegate3(int p1, string p2);
 
   4. 宣告委派物件並叫用：
-     1. 參考程式：
+     1) 參考程式：
         namespace n
         {
            public delegate void delegate1();
@@ -47,30 +48,14 @@
               }
            }
         }
-     2. 宣告：
+     2) 宣告：
         delegate1 d1=(new Ex()).func1;
         delegate2 d2=Ex.func2;
         delegate1 d11=new delegate1((new Ex()).func1);
         delegate2 d22=new delegate2(Ex.func2);
-     3. 叫用：
+     3) 叫用：
         d1();
         d1.Invoke();
         d2(3);
         d2.Invoke(4);
-        namespace n
-        {
-           public delegate void delegate1();
-           public class Ex
-           {
-              public delegate int delegate2(int a);
-              public void func1()
-              {
-                // 程式碼
-              }
-     
-              public static int func2(int a)
-              {
-                // 程式碼
-              }
-           }
-        }
+        
